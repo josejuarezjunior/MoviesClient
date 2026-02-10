@@ -1,17 +1,9 @@
-<!-- @if (loading) {
-  <p>Carregando...</p>
-} -->
+<h1>Movies</h1>
 
-@if (error) {
-  <p style="color:red">{{ error }}</p>
-}
-
-@if (error) {
-  <ul>
-    @for (m of movies; track m.id) {
-      <li>
-        <b>{{ m.title }}</b> — {{ m.director }} ({{ m.releaseYear }})
-      </li>
-    }
-  </ul>
-}
+<ul>
+  @for (m of movies; track m.id) {
+    <li>
+      <b>{{ m.title }}</b> — {{ m.director }} ({{ m.releaseyear }})
+    </li>
+  }
+</ul>
