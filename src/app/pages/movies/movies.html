@@ -1,0 +1,17 @@
+<!-- @if (loading) {
+  <p>Carregando...</p>
+} -->
+
+@if (error) {
+  <p style="color:red">{{ error }}</p>
+}
+
+@if (error) {
+  <ul>
+    @for (m of movies; track m.id) {
+      <li>
+        <b>{{ m.title }}</b> — {{ m.director }} ({{ m.releaseYear }})
+      </li>
+    }
+  </ul>
+}
