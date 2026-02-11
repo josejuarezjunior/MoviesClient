@@ -1,5 +1,5 @@
 <h1>Movies</h1>
 
 @for (m of movies; track m.id) {
-  <p>{{ m.title }}| {{ m.director }} | ({{ m.releaseYear }})</p>
+  <p><strong>{{ m.title }}</strong> | {{ m.director }} | {{ m.releaseYear }}</p>
 }
