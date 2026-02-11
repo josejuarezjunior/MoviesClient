@@ -1,5 +1,7 @@
-<h1>Movies</h1>
+<h1>Movies (Total: {{ movies().length }})</h1>
 
-@for (m of movies; track m.id) {
+@for (m of movies(); track m.id) {
   <p><strong>{{ m.title }}</strong> | {{ m.director }} | {{ m.releaseYear }}</p>
+} @empty {
+  <p>A lista está vazia ou ainda carregando...</p>
 }
